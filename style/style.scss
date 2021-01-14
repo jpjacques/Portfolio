@@ -1,0 +1,307 @@
+//create color variables here
+
+
+//HEADER STYLING BELOW
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-attachment: fixed;
+  background-color: #212529;
+  background-repeat: no-repeat;
+  box-shadow: 1px 0 50px 50px #000;
+  font-family: 'Poiret One', cursive;
+  letter-spacing: .75rem;
+  margin: 0 20rem;
+
+  h1 {//nested inside body
+    font-size: 6rem;
+  }
+}
+
+header{//nested inside body
+  line-height: 5rem;
+  margin-bottom: 20rem;
+  .headerNav {
+      margin-bottom: 5rem;
+  }
+  #navBarTop {
+    display: flex;
+    justify-content: center;
+    margin-top: 7rem;
+    li {
+      list-style-type: none;
+      margin-top: 2rem;
+      &:hover {//telling it that li should do what's above AND& on hover do this
+          transform: scale(1.25); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+          transition:.5s;
+      }
+      a {
+        background: #212529;
+        color: #F8F9FA;
+        font-size: 3.5rem;
+        opacity: 80%;
+        padding: 0 3rem;
+        text-decoration: none;
+        transition: .5s;
+        &:hover {
+            background-color: #F8F9FA;
+            color: #212529;
+            opacity: 80%;
+            margin: 0 3rem;
+        }//closes "hover" psuedo-class
+      }//closes "a"
+    }//closes "li"
+  }//closes "navBarTop"
+}//closes "header"
+
+.headerContainer {
+    background-color: #212529;
+    box-shadow: 5px 5px 15px 5px rgba(229, 229, 229, 0.6);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin: 0 10vw;
+    padding: 15vh 0;
+
+    p {//nested inside of .headerContainer
+      color: #F8F9FA;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    .headP1 {//nested inside of .headerContainer
+        border-bottom: solid whitesmoke 1px;
+        font-size: 6rem;
+        line-height: 10rem;
+        margin: 0 5rem;
+    }
+
+    .headP2 {//nested inside of .headerContainer
+        line-height: 6rem;
+        margin: 8rem 20rem;
+    }
+}
+
+
+/* ABOUT ME STYLING BELOW */
+
+.about {
+    color: whitesmoke;
+    display: flex;
+    justify-content: space-evenly;
+
+    .aboutHeaderContainer {//nested inside of .about
+        background-color: #212529;
+        font-size: 2rem;
+        margin: auto 0;
+        opacity: .8;
+        width: 500px;
+
+        img {//nested inside .aboutHeaderContainer
+            margin:10rem 0;
+            border-radius: 3%;
+        }
+
+        p {//nested inside .aboutHeaderContainer
+            border-left: solid 1px white;
+            border-top: solid 1px white;
+            text-align: center;
+        }
+    }
+}
+/* PROJECTS STYLING BELOW */
+
+
+.projects {
+  margin-top: 15%;
+  h1 {
+      border-bottom:1px solid whitesmoke;
+      border-right:1px solid whitesmoke;
+      margin:0 auto;
+      text-align: center;
+      color:whitesmoke;
+      width:25%;
+  }
+  .project1, .project2, .project3 {
+      color: white;
+      display: flex;
+      ///justify-content: space-around;
+      font-size: 3rem;
+      margin: 6rem;
+  }
+  .project1, .project3 {
+      flex-direction: row-reverse;
+  }
+  .project2 {
+      flex-direction: row;
+  }
+  img {
+      margin: 0 3rem;
+      border-radius: 3%;
+  }
+  a {
+      font-size:2rem;
+      margin-bottom:1rem;
+      color:white;
+  }
+}
+
+/* FOOTER STYLING BELOW */
+
+footer {
+    text-align:center;
+    margin-top:5rem;
+    margin-bottom:7rem;
+    nav a {
+        font-size: 3.5rem;
+        text-decoration: none;
+        border:solid black 1px;
+        padding:0 3rem;
+    }
+    .navBarBottom {
+        justify-content: flex-end;
+        margin-top: 2rem;
+        a {
+            color:#b5d6e6;
+            background:#2f5161;
+        }
+    }
+    .fab {
+        font-size:5rem;
+        color:#6ebce0;
+        margin-bottom:5rem;
+        text-align: center;
+        margin:0 3rem 5rem;
+    }
+}
+
+
+/* MEDIA QUERIES BELOW */
+/*  */
+
+
+@media only screen and (max-width: 1100px)
+{
+    body {
+        box-shadow: 1px 0px 25px 25px #000000;
+        margin: 4rem 4rem;
+        padding: 0rem;
+    }
+
+    nav {
+        flex-direction: row;
+        text-align:center;
+    }
+    header {
+        margin-bottom:5rem;
+    }
+
+    #navBarTop {
+        margin:0;
+    }
+
+    img {
+        width:50%;
+        height:auto;
+    }
+
+    nav li {
+        font-size:1rem;
+    }
+
+    p.headP1 {
+        font-size:3rem;
+        line-height:4rem;
+        font-weight:bold;
+        padding:1rem;
+    }
+
+    p.headP2 {
+        font-size:2rem;
+        margin:1rem 4rem;
+        line-height:3rem;
+        padding-bottom:2rem;
+
+    }
+
+    section.aboutHeaderContainer {
+        width:100%;
+        text-align:center;
+        margin-bottom:5rem;
+    }
+
+    section.aboutHeaderContainer p {
+        margin:0 auto;
+    }
+
+    .mediaQueryContainer {
+        display:flex;
+        flex-direction: column;
+    }
+
+/* ABOUT ME STYLING BELOW */
+
+    .about {
+        display: block;
+        margin: 0;
+        p {
+            width: 65%;
+            font-size: 2rem;
+        }
+        img {
+            display: none;
+        }
+    }
+
+
+
+.projectsH1 {
+    font-size:2.5rem;
+    padding:2rem 2rem;
+}
+.projects {
+    margin-top:10rem;
+    text-align:center;
+}
+
+.project1, .project2, .project3 {
+    /* font-size:2rem;
+    width:80%;
+    margin:0 auto;
+    border-bottom:white dotted 1px;
+    margin:1rem auto; */
+    display:flex;
+    justify-content: space-evenly;
+    font-size:2rem;
+}
+
+#projects .item {
+    margin:0 auto;
+}
+
+#projects img {
+    margin:0 auto;
+    display:none;
+}
+
+.project1 .caption, .project2 .caption, .project3 .caption {
+    margin-bottom:2rem;
+}
+}
+
+
+@media only screen and (max-width: 500px) {
+
+  body {
+      margin: 0;
+      display:flex;
+      flex-direction: column;
+  }
+
+  #navBarTop {
+      flex-direction: column;
+    }
+  }
