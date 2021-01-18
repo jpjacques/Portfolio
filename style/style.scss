@@ -108,18 +108,15 @@ header{//nested inside body
       margin:10rem 0;
       border-radius: 3%;
     }
-
-    .pHolder {
-      border-left: solid 1px white;
-      border-top: solid 1px white;
-      p {//nested inside .aboutHeaderContainer
-        text-align: center;
-      }
-    }
-
-
   }
 }
+
+.aboutMe {
+  border-left: solid 1px white;
+  border-top: solid 1px white;
+  text-align: center;
+}
+
 /* PROJECTS STYLING BELOW */
 
 
