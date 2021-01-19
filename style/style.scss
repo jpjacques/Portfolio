@@ -104,6 +104,10 @@ header{//nested inside body
     opacity: .8;
     width: 500px;
 
+    h1 {
+      margin: 0;
+    }
+
     img {//nested inside .aboutHeaderContainer
       border-radius: 3%;
       margin: 10rem 0;
@@ -122,6 +126,7 @@ header{//nested inside body
 
 .projects {
   margin-top: 12vh;
+
   h1 {
     border-bottom: 1px solid whitesmoke;
     border-right: 1px solid whitesmoke;
@@ -157,7 +162,6 @@ header{//nested inside body
 
   a {
     color: white;
-    font-size: 2rem;
     margin-bottom: 1rem;
   }
 }
